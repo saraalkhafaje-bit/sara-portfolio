@@ -1,0 +1,360 @@
+/* Reset */
+/* Nogle CSS-elementer er inspireret af guides fra https://www.w3schools.com/ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variabler - Håndværker Farvepalette. Inspireret af https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties */
+:root {
+    --oliven-mork: #5a6139;
+    --rust-mork: #7a3c1a;
+    --rust-mellem: #a6551e;
+    --rust-lys: #c67430;
+    --orange-varm: #d97e3a;
+    --beige-lys: #f0dcaa;
+    --groen-mork: #2d3621;
+    --brun-mork: #231f1d;
+    --sort: #1a1714;
+    --oliven-lys: #8b9462;
+    --hvid: #ffffff;
+    --graa-lys: #f8f9fa;
+    --pixel-orange: #ff6b35;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--brun-mork);
+    background-color: var(--graa-lys);
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--hvid);
+    padding: 1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    border-bottom: 3px solid var(--rust-mellem);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    color: var(--groen-mork);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    color: var(--brun-mork);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--rust-mellem);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--beige-lys) 0%, var(--hvid) 100%);
+    color: var(--brun-mork);
+    text-align: center;
+    padding: 8rem 5%;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rust-mork), var(--rust-mellem), var(--orange-varm));
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--groen-mork);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--brun-mork);
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    background-color: var(--rust-mellem);
+    color: #fff;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(166, 85, 30, 0.25);
+}
+
+.btn:hover {
+    background-color: var(--rust-mork);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(122, 60, 26, 0.35);
+}
+
+/* Intro Section */
+.intro {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem 5%;
+    text-align: center;
+    background-color: var(--hvid);
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.06);
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--groen-mork);
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, var(--hvid) 0%, var(--beige-lys) 100%);
+    padding: 3rem 5%;
+    text-align: center;
+    color: var(--brun-mork);
+    border-bottom: 4px solid var(--rust-mellem);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--groen-mork);
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--brun-mork);
+}
+
+/* Services Grid */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.service-card {
+    background-color: var(--hvid);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border-left: 4px solid var(--rust-mellem);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(166, 85, 30, 0.3);
+}
+
+.service-card h3 {
+    color: var(--rust-mork);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Portfolio Grid */
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-placeholder {
+    background: linear-gradient(135deg, var(--rust-mellem), var(--orange-varm));
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.portfolio-item h3 {
+    padding: 1rem;
+    color: var(--groen-mork);
+    font-size: 1.2rem;
+}
+
+.portfolio-item p {
+    padding: 0 1rem 1rem;
+    color: #666;
+}
+
+/* About Section */
+.about {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2rem 5%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.about h3 {
+    font-size: 1.5rem;
+    color: var(--rust-mork);
+    margin: 2rem 0 1rem;
+}
+
+.about ul {
+    margin-left: 2rem;
+}
+
+.about li {
+    margin-bottom: 0.5rem;
+    color: var(--brun-mork);
+}
+
+/* Contact Section */
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 0 5%;
+}
+
+.contact-info,
+.opening-hours {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact h2 {
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.contact p {
+    margin-bottom: 0.8rem;
+}
+
+.contact a {
+    color: var(--rust-mellem);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact a:hover {
+    color: var(--orange-varm);
+    text-decoration: underline;
+}
+
+/* Tilbage knap */
+.back-button {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: var(--rust-mellem);
+    color: #fff;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    z-index: 1000;
+    transition: all 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.back-button:hover {
+    background-color: var(--orange-varm);
+    transform: translateY(-50%) translateX(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: var(--green-dark);
+    color: var(--beige-light);
+    text-align: center;
+    padding: 2rem 5%;
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+}

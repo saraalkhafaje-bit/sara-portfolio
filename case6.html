@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Webdesign og udvikling case - HTML/CSS af Sara Al-Khafaje">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Webdesign | Sara Al-Khafaje</title>
+    <link rel="icon" type="image/png" href="Images/favicon-pixeldesignstudio.png">
+</head>
+
+<script>
+/* BURGER MENU - åbner/lukker mobil navigation */
+function myFunction() {
+  var x = document.getElementById("myLinks");
+  x.style.display = (x.style.display === "block") ? "none" : "block";
+}
+
+/* Venter til siden er færdig med at loade */
+document.addEventListener('DOMContentLoaded', function() {
+  
+  /* Luk mobil menu når der klikkes på et link */
+  document.querySelectorAll('#myLinks a').forEach(link => {
+    link.onclick = () => document.getElementById("myLinks").style.display = "none";
+  });
+  
+  /* SCROLL TIL TOP KNAP */
+  var btn = document.getElementById("top");
+  
+  /* Vis knap når brugeren scroller 300px ned */
+  window.onscroll = () => btn.style.opacity = window.pageYOffset > 300 ? '1' : '0';
+  
+  /* Scroll til toppen med smooth animation når der klikkes */
+  btn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
+
+<body>
+    <div class="hero">
+        <nav>
+            <a href="index.html"><img src="Images/logopixeldesignstudio.webp" class="logo" alt="Logo"></a>
+            <!-- Desktop menu -->
+            <ul class="desktop-menu">
+                <li><a href="om-mig.html">OM MIG</a></li>
+                <li class="active"><a href="cases.html">CASES</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+
+            <!-- Mobile burger icon -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li><a href="cases.html">Cases</a></li>
+                <li>Webdesign & Udvikling</li>
+            </ul>
+        </div>
+
+
+        <!-- Mobile dropdown menu -->
+        <div id="myLinks">
+            <a href="om-mig.html">OM MIG</a>
+            <a href="cases.html" class="active">CASES</a>
+            <a href="kontakt.html">KONTAKT</a>
+        </div>
+
+        <!-- Content inde i hero -->
+        <div class="content">
+            <h1 class="anim">Webdesign & Udvikling</h1>
+            
+            <p class="anim">Responsivt webdesign med fokus på brugervenlighed, æstetik og funktionalitet.</p>
+
+            <p class="anim"><strong>Værktøjer:</strong> HTML, CSS, JavaScript</p>
+
+            <p class="anim"><strong>Opgave:</strong> </p>
+
+            <p class="anim"><strong>Løsning:</strong> </p>
+
+            <a href="hv-index.html" class="btn anim" style="background-color: #2a9d8f; margin-top: 20px;">SE EKSEMPEL PÅ WEBSIDE</a>
+
+            <p class="anim"><strong>Resultat:</strong> [Beskriv resultatet her]</p>
+
+            <a href="cases.html" class="btn anim">TILBAGE TIL CASES</a>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer__content">
+            <!-- Logo -->
+            <div class="footer__logo">
+                <img src="Images/logopixeldesignstudio.webp" class="logo" alt="Logo">
+            </div>
+            <div class="footer__nav-contact-row">
+                <!-- Navigation -->
+                <nav class="footer__nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Forside</a></li>
+                        <li><a href="cases.html">Cases</a></li>
+                        <li><a href="om-mig.html">Om mig</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <!-- Kontakt -->
+                <div class="footer__contact">
+                    <h3>Kontakt</h3>
+                    <p>Åben for nye projekter</p>
+                    <p>Lad os tage en uforpligtende snak</p>
+                    <p>Email: <a href="mailto:saraalkhafaje@hotmail.com">saraalkhafaje@hotmail.com</a></p>
+                    <p>Tlf: <a href="tel:+4591983630">+45 91 98 36 30</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright-->
+        <div class="footer__copyright">
+            <p>2025 Pixel Design Studio © Alle rettigheder forbeholdes</p>
+        </div>
+    </footer>
+    <button id="top">↑</button>
+</body>
+</html>

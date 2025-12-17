@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <!--For responsive styles der passer til forskellige enheder-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gør siden responsiv - tilpasser sig skærmens bredde -->
+    <meta name="description" content="Sara Al-Khafaje - Multimediedesigner specialiseret i æstetik, branding og brugervenlig design"> <!-- Kort beskrivelse som Google viser i søgeresultater. Vigtigt for SEO -->
+    <link rel="stylesheet" href="style.css"> <!-- Linker til CSS-stylesheet. Browseren henter alle design-regler herfra -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Henter Font Awesome ikonbibliotek fra internettet. Giver adgang til burgermenu-ikonet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- Opretter forbindelse til Google Fonts serveren på forhånd, så fonten loader hurtigere -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800;900&display=swap" rel="stylesheet"> <!-- Henter Poppins-fonten fra Google Fonts. 7 forskellige tykkelser importeres -->
+    <title>Cases | Sara Al-Khafaje</title> <!-- Tekst i browser-fanen og Google søgeresultater -->
+    <link rel="icon" type="image/png" href="Images/favicon-pixeldesignstudio.png"> <!-- Logo i browser-fanen -->
+</head>
+
+<script>
+/* BURGER MENU - åbner/lukker mobil navigation */
+function myFunction() {
+  var x = document.getElementById("myLinks"); /* Finder menu-elementet */
+  x.style.display = (x.style.display === "block") ? "none" : "block"; /* Skifter mellem vist og skjult */
+}
+
+/* Venter til siden er færdig med at loade */
+document.addEventListener('DOMContentLoaded', function() {
+  
+  /* Luk mobil menu når der klikkes på et link */
+  document.querySelectorAll('#myLinks a').forEach(link => {
+    link.onclick = () => document.getElementById("myLinks").style.display = "none";
+});
+  
+  /* SCROLL TIL TOP KNAP */
+  var btn = document.getElementById("top"); /* Finder scroll-knappen */
+  
+  /* Vis knap når brugeren scroller 300px ned */
+  window.onscroll = () => btn.style.opacity = window.pageYOffset > 300 ? '1' : '0';
+  
+  /* Scroll til toppen med smooth animation når der klikkes */
+  btn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+});
+</script>
+
+<body>
+    <div class="hero cases-page">
+        <nav>
+<a href="index.html"><img src="Images/logopixeldesignstudio.webp" class="logo" alt="Logo"></a>            <!-- Desktop menu -->
+            <ul class="desktop-menu">
+                <li><a href="om-mig.html">OM MIG</a></li>
+                <li class="active"><a href="cases.html">CASES</a></li>
+                <li><a href="kontakt.html">KONTAKT</a></li>
+            </ul>
+
+            <!-- Mobile burger icon -->
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <ul>
+                <li><a href="index.html">Forside</a></li>
+                <li>Cases</li>
+            </ul>
+        </div>
+        <!-- Mobile dropdown menu -->
+        <div id="myLinks">
+            <a href="om-mig.html">OM MIG</a>
+            <a href="cases.html" class="active">CASES</a>
+            <a href="kontakt.html">KONTAKT</a>
+        </div>
+
+        <!-- Brødtekst-->
+<section class="cases-section">
+    <h1 class="anim">Cases</h1>
+    <p class="anim">Her kan man se nogle af mine tidligere projekter og cases,<br>
+  som jeg har arbejdet på. Hvert  projekt repræsenterer min tilgang til design<br>
+  og min evne til at skabe visuelle løsninger, der opfylder lige netop jeres behov.</p>
+    <div class="cases-grid">
+                <!-- Card 1 - Webdesign -->
+                <div class="case-card">
+                    <img src="Images/case6.webp" alt="Webdesign">
+                    <div class="case-content">
+                        <h3>Webdesign & Udvikling</h3>
+                        <p>Responsivt webdesign med HTML, CSS og JavaScript.</p>
+                        <a href="case6.html" class="case-link">Gå til case →</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 - App Prototype -->
+                <div class="case-card">
+                    <img src="Images/case5.webp" alt="App Prototype">
+                    <div class="case-content">
+                        <h3>App Prototype - UX/UI Design</h3>
+                        <p>Brugervenlig app-design og interaktive prototyper i Figma.</p>
+                        <a href="case5.html" class="case-link">Gå til case →</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Video -->
+                <div class="case-card">
+                    <img src="Images/case4.webp" alt="Video">
+                    <div class="case-content">
+                        <h3>Video & videoredigering</h3>
+                        <p>Videoproduktion og redigering med Premiere Pro.</p>
+                        <a href="case4.html" class="case-link">Gå til case →</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 - Logo Design -->
+                <div class="case-card">
+                    <img src="Images/logopixeldesignstudio.webp" alt="Logo Design">
+                    <div class="case-content">
+                        <h3>Logo Design</h3>
+                        <p>Grafisk design med fokus på visuel identitet og branding.</p>
+                        <a href="case1.html" class="case-link">Gå til case →</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 - Animation -->
+                <div class="case-card">
+                    <img src="Images/case2.webp" alt="Animation">
+                    <div class="case-content">
+                        <h3>Animation</h3>
+                        <p>Motion graphics og animation med Photoshop og After Effects.</p>
+                        <a href="case2.html" class="case-link">Gå til case →</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 - Fotografi -->
+                <div class="case-card">
+                    <img src="Images/case3.webp" alt="Fotografi">
+                    <div class="case-content">
+                        <h3>Fotografi & Billedredigering</h3>
+                        <p>Professionel fotografi og redigering med fokus på æstetik.</p>
+                        <a href="case3.html" class="case-link">Gå til case →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA efter cases -->
+        <div class="kontakt-cta">
+            <p>Lad os skabe noget fantastisk sammen</p>
+            <a href="kontakt.html" class="btn">KONTAKT MIG</a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer__content">
+            <!-- Logo -->
+            <div class="footer__logo">
+                <img src="Images/logopixeldesignstudio.webp" class="logo" alt="Logo">
+            </div>
+
+            <div class="footer__nav-contact-row">
+                <!-- Navigation -->
+                <nav class="footer__nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="index.html">Forside</a></li>
+                        <li><a href="cases.html">Cases</a></li>
+                        <li><a href="om-mig.html">Om mig</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <!-- Kontakt -->
+                <div class="footer__contact">
+                    <h3>Kontakt</h3>
+                    <p>Åben for nye projekter</p>
+                    <p>Lad os tage en uforpligtende snak</p>
+                    <p>Email: <a href="mailto:saraalkhafaje@hotmail.com">saraalkhafaje@hotmail.com</a></p>
+                    <p>Tlf: <a href="tel:+4591983630">+45 91 98 36 30</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer__copyright">
+            <p>2025 Pixel Design Studio © Alle rettigheder forbeholdes</p>
+        </div>
+    </footer>
+    <button id="top">↑</button>
+</body>
+</html>
