@@ -49,11 +49,9 @@ nav {
     margin: 0 auto;
 }
 
-.logo {
-    color: var(--groen-mork);
-    font-size: 1.5rem;
-    font-weight: bold;
-    letter-spacing: -0.5px;
+.logo img {
+    height: 190px;
+    width: auto;
 }
 
 nav ul {

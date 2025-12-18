@@ -1,6 +1,263 @@
+/* Målgruppe intro animation */
+.målgruppe-intro-anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: målgruppeFadeInUp 1s ease-out 0.2s forwards;
+}
+
+@keyframes målgruppeFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.overskrift-tekst-blok .btn,
+.kontakt-cta .btn {
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+}
+.målgruppe-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+@media (max-width: 1200px) {
+    .målgruppe-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px;
+    }
+}
+@media (max-width: 700px) {
+    .målgruppe-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+    }
+}
+.målgruppe-sektion {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    padding: 0 10%;
+
+}
+.målgruppe-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.målgruppe-cards-grid .case-card {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    text-align: left;
+    padding: 0;
+}
+.målgruppe-cards-grid .case-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    padding: 25px 20px 20px 20px;
+}
+.målgruppe-cards-grid .case-content h3 {
+    font-size: 22px;
+    color: #5ec776;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: left;
+}
+.målgruppe-cards-grid .case-content p {
+    font-size: 15px;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin: 0;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    text-align: left;
+}
+.målgruppe > p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+.målgruppe-cta {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.målgruppe-cta p {
+    max-width: 500px;
+    margin: 0 auto 18px auto;
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+@media (max-width: 1200px) {
+    .målgruppe-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+@media (max-width: 700px) {
+    .målgruppe-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .målgruppe-cards-grid .case-card {
+        min-height: 140px;
+    }
+    .målgruppe-cta p {
+        max-width: 100%;
+    }
+}
+/* Målgruppe cards matcher cases cards */
+.målgruppe-cards-grid {
+    margin-bottom: 30px;
+}
+.målgruppe-cards-grid .case-card {
+    min-height: 220px;
+}
+.målgruppe-extra {
+    font-size: 16px;
+    color: #1a1a1a;
+    font-weight: 600;
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+@media (max-width: 900px) {
+    .målgruppe-cards-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+    }
+    .målgruppe-cards-grid .case-card {
+        min-height: 180px;
+    }
+}
+@media (max-width: 600px) {
+    .målgruppe-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .målgruppe-cards-grid .case-card {
+        min-height: 140px;
+    }
+}
+/* Digitale pensler cards styling */
+.tools-cards-section {
+    background: transparent;
+    padding: 20px 10% 60px 10%;
+    text-align: center;
+}
+
+.tools-cards-section h1 {
+    font-size: clamp(22px, 5vw, 30px);
+    color: #005f73;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.tools-cards-section p {
+    font-size: clamp(15px, 2.5vw, 17px);
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.tools-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.tools-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+.tools-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.tools-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+.tools-card h3 {
+    font-size: 22px;
+    color: #5ec776;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+.tools-card-sub {
+    font-size: 15px;
+    color: #005f73;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.tools-card p {
+    font-size: 15px;
+    color: #1a1a1a;
+    font-weight: 500;
+    margin: 0;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+@media (max-width: 900px) {
+    .tools-cards-section {
+        padding: 40px 3%;
+    }
+    .tools-cards-grid {
+        gap: 18px;
+    }
+    .tools-card {
+        padding: 18px 8px 12px 8px;
+    }
+    .tools-card img {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tools-cards-section {
+        padding: 20px 2%;
+    }
+    .tools-cards-grid {
+        gap: 10px;
+    }
+    .tools-card {
+        padding: 10px 2px 8px 2px;
+    }
+    .tools-card img {
+        width: 32px;
+        height: 32px;
+    }
+}
 /* Nogle CSS-elementer er inspireret af guides fra https://www.w3schools.com/ */
 *{
-    margin:0;
     padding:0;
     box-sizing:border-box;
     font-family: 'Poppins', sans-serif;
@@ -19,7 +276,7 @@ p {
     background-image: url("Images/background.webp");
     background-size: cover;
     background-position: center;
-    padding: 10px 10%;
+    padding: 30px 10%;
     overflow: visible;  
     position: relative;
 }
@@ -38,13 +295,10 @@ p {
 /* Flex-nav: logo til venstre, menu til højre med jævnt mellemrum */
 .hero nav {
     position: relative;
-    padding: 15px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     border-bottom: 3px solid #ff543a00;
-    padding-bottom: 20px;
-    margin-bottom: 40px;
 }
 
 .hero nav ul {
@@ -112,15 +366,15 @@ p {
     color: #1a1a1a;
     text-align: left;
     position: static;
-    padding-left: 20px; /*Samme indryk som brødtekst */
+
 }
 
 .content h1 {
     font-size: clamp(20px, 4vw, 25px);
+    margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 800;
     line-height: 1.3;
-    padding-left: 20px; /*Samme indryk som brødtekst */
 }
 
 .content p {
@@ -130,7 +384,6 @@ p {
     font-weight: 500;
     line-height: 1.6;
     background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */
-    padding: 16px;
     border-radius: 8px;
     text-align: justify;
 }
@@ -167,10 +420,10 @@ p {
 
 .målgruppe {
     max-width: 1000px;
-    margin: 120px auto;
+    margin: 40px auto;
     padding: 0 10%;
     text-align: left;  
-    background-color: #f9f9f9;
+    background-color: transparent;
 }
 
 .målgruppe h2 {
@@ -294,7 +547,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
 
 .featured-image.anim {
     animation-delay: 1.5s;
-    margin-top: 80px; 
+    padding-bottom: 30px;
 }
 
 @keyframes moveup {
@@ -308,7 +561,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
 .footer {
     background-color: #1a1a1a;
     padding: 60px 10% 40px;
-    margin-top: 120px;
+
 }
 
 /* CSS Grid inspiration: https://www.w3schools.com/css/css_grid.asp */
@@ -319,7 +572,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
     justify-content: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 60px; 
+
 }
 
 .footer__logo {
@@ -389,6 +642,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
     font-size: 15px;
     color: #b0b0b0;
     line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 .footer__contact a {
@@ -405,7 +659,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
 
 .footer__nav {
     grid-area: nav;
-    text-align: center;
+    text-align: left;
     
 }
 
@@ -414,12 +668,13 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    align-items: center;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 0;
 }
 
 .footer__nav ul li {
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 .footer__nav ul li a {
@@ -429,6 +684,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
     font-weight: 500;
     transition: all 0.3s ease;
     display: inline-block;
+    text-align: left;
 }
 
 .footer__nav ul li a:hover {
@@ -471,7 +727,7 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
 
 /* Cases stil */
 .cases-section {
-    padding: 0 10% 80px;
+    padding: 10px 10% 80px;
 }
 
 .cases-section > p {
@@ -479,7 +735,8 @@ background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 2
 }
 
 .cases-section > h1 {
-    margin-bottom: 32px;
+        margin-top: 30px;
+    margin-bottom: 12px;
 padding-left: -10px; 
 }
 
@@ -544,7 +801,6 @@ padding-left: -10px;
     margin-bottom: 15px;
     margin-top: 0;
     background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */
-    padding: 15px;
     border-radius: 8px;
 }
 
@@ -561,26 +817,48 @@ padding-left: -10px;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    padding: 20px 0 100px;
-    position: relative;
+    padding-top: 50px;
 }
 
-.hero-content-wrapper .content {
-    position: static;
-    margin: 0;
-}
-
-.hero-content-wrapper .featured-image {
-    position: static;
+.overskrift-tekst-blok {
     width: 100%;
-    max-width: 500px;
-    justify-self: end;
+}
+
+.gif {
+  height: auto;
+  border-radius: 8px;
+  padding: 20px; 
+}
+
+.caseside-billede {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    object-fit: cover;
+}
+
+.hero-content.case-hero-content.appprototype-hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .hero-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .caseside-billede {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 /* Målgruppe sektion */
 .målgruppe {
     text-align: left;  
-    padding: 80px 10%;
+    padding: 20px 10%;
     background-color: #f9f9f9;
     max-width: 100%;  
 }
@@ -606,8 +884,8 @@ padding-left: -10px;
 
 /* Målgruppe sektion på Om Mig siden */
 .målgruppe-om-mig {
-    background-color: #fff;
-    padding: 60px 10%;
+    background-color: transparent;
+    padding: 60px 10% 0px 10%;
     text-align: center;
 }
 
@@ -616,12 +894,12 @@ padding-left: -10px;
     margin-bottom: 30px;
 }
 
-.målgruppe-intro p,
-.målgruppe-outro p {
-background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    
-padding: 20px;
+.målgruppe-intro p {
+    background-color: transparent;
+    padding: 0px;
+    text-align: left;
     border-radius: 8px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     line-height: 1.6;
     font-size: clamp(14px, 3vw, 16px);
 }
@@ -848,8 +1126,7 @@ padding: 20px;
 /* ===== TABLET (801px - 1200px) ===== */
 @media (min-width: 801px) and (max-width: 1200px) {
     .hero {
-        padding: 10px 6%;
-        padding-bottom: 380px;  
+        padding: 30px 6%;
     }
 
     .content {
@@ -868,7 +1145,7 @@ padding: 20px;
 
     .featured-image {
         width: 300px;
-        position: absolute;
+        position: static;
         top: 30%; 
         right: 6%;
     }
@@ -907,13 +1184,13 @@ padding: 20px;
     .featured-image {
         width: 450px;
         height: auto;    
-        position: absolute;
+        position: static;
         top: 20%; 
         right: 10%;
     }
 
     .hero {
-        padding-bottom: 250px;
+        padding-bottom: 10px;
     }
 }
 
@@ -949,7 +1226,7 @@ padding: 20px;
 
 /* Breadcrumbs */
 .breadcrumbs {
-    padding: 15px 0;
+    padding: 30px 0;
     background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */
     border-bottom: 1px solid #e0e0e0;
 }
@@ -1008,10 +1285,11 @@ padding: 20px;
 .overskrift-tekst-blok {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    align-self: center;
     gap: 10px;
     height: 100%;
+
 }
 
 .kontakt-cta {
@@ -1021,8 +1299,7 @@ padding: 20px;
     justify-content: center;
     text-align: center;
     margin: 60px 0 60px 0;
-    margin-top: 130px;
-    margin-bottom: auto;
+   
 }
 
 .kontakt-cta p {
@@ -1040,9 +1317,21 @@ padding: 20px;
     padding: 14px 36px;
 }
 
+.overskrift-tekst-blok .btn {
+    align-self: flex-start;
+}
+
 @media (max-width: 800px) {
     .målgruppe-liste {
         grid-template-columns: 1fr;
         gap: 15px;
     }
+}
+
+.målgruppe-sektion h2 {
+    font-size: clamp(22px, 5vw, 30px);
+    color: #005f73;
+    font-weight: 800;
+justify-self: center;
+    margin-top: 40px;
 }
