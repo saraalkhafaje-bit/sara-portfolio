@@ -489,7 +489,8 @@ p {
     max-width: 100%;  
     margin: 0; 
     line-height: 1.6;
-background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */    padding: 20px;
+background-color: rgba(249, 249, 249, 0.5); /* 50% gennemsigtig */   
+ padding: 20px;
     border-radius: 8px;
 }
 
@@ -830,6 +831,38 @@ padding-left: -10px;
   padding: 20px; 
 }
 
+.målgruppe-sektion h2 {
+    font-size: clamp(22px, 5vw, 30px);
+    color: #005f73;
+    font-weight: 800;
+justify-self: center;
+    margin-top: 40px;
+}
+.video-tekst-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+.video-tekst-container > div {
+  flex: 1;
+}
+.video-tekst-container video {
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+.foto-case-image {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+  padding-left: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  object-fit: cover;
+}
+
 .caseside-billede {
     width: 100%;
     max-width: none;
@@ -897,7 +930,7 @@ padding-left: -10px;
 .målgruppe-intro p {
     background-color: transparent;
     padding: 0px;
-    text-align: left;
+    text-align: center;
     border-radius: 8px;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -1328,10 +1361,15 @@ padding-left: -10px;
     }
 }
 
-.målgruppe-sektion h2 {
-    font-size: clamp(22px, 5vw, 30px);
-    color: #005f73;
-    font-weight: 800;
-justify-self: center;
-    margin-top: 40px;
+
+@media (max-width: 900px) {
+  .video-tekst-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .foto-om-mig-image {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
 }
